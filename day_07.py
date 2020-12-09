@@ -36,7 +36,7 @@ class Bag:
                 count += child_bag.qty * child_bag.bag.count_contained_bags()
             else:
                 count += child_bag.qty
-        return count
+        return count + 1
 
 
 class AllBags:
@@ -96,4 +96,5 @@ def get_parent_bags(all_bag_rules, bag_description):
 def number_of_contained_bags(all_bag_rules, bag_description):
     all_bags = AllBags(all_bag_rules=all_bag_rules)
     found_bag: Bag = all_bags.find_bag(bag_description)
-    return found_bag.count_contained_bags()
+    bag_count = found_bag.count_contained_bags() - 1  # Subtract self
+    return bag_count

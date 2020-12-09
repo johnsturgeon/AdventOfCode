@@ -28,4 +28,5 @@ def test_get_seat_id_sample(sample_data):
 
 
 def test_get_seat_id(real_data):
-    assert day_07.get_parent_bags(real_data, 'shiny gold') == 32
+    assert day_07.get_parent_bags(real_data, 'shiny gold') == 257
+    assert day_07.number_of_contained_bags(real_data, 'shiny gold') == 1038
