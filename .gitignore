@@ -1,2 +1,3 @@
 # Project exclude paths
 /env/
+__pycache__
