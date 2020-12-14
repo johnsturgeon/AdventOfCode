@@ -22,11 +22,11 @@ def real_data():
     return real_list
 
 
-def test_get_accumulator_sample(sample_data):
+def test_sample(sample_data):
     assert day_10.multiply_differences(sample_data) == 220
     assert day_10.count_all_combinations(sample_data) == 19208
 
 
-def test_get_accumulator(real_data):
+def test_real(real_data):
     assert day_10.multiply_differences(real_data) == 2450
     assert day_10.count_all_combinations(real_data) == 32396521357312

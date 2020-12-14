@@ -22,11 +22,11 @@ def real_data():
     return real_list
 
 
-def test_get_accumulator_sample(sample_data):
+def test_sample(sample_data):
     assert day_09.get_invalid_cipher(sample_data, preamble_length=5) == 127
     assert day_09.get_weakness(sample_data, preamble_length=5) == 62
 
 
-def test_get_accumulator(real_data):
+def test_real(real_data):
     assert day_09.get_invalid_cipher(real_data, preamble_length=25) == 32321523
     assert day_09.get_weakness(real_data, preamble_length=25) == 4794981
