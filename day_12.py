@@ -17,13 +17,13 @@ def get_waypoint_directions(relative_directions):
                 if new_distance < 0:
                     new_distance = new_distance * -1
                     waypoint.pop(opposite_heading)
-                waypoint[opposite_heading] = new_distance
+                    waypoint[heading_index] = new_distance
+                else:
+                    waypoint[opposite_heading] = new_distance
         if heading == 'F':
-            print(f"Moving ship by {distance} * {waypoint}")
             for point in waypoint:
                 head = headings[point]
                 amt = waypoint[point]
-                print(f"appending abs direction: {head}{amt * distance}")
                 absolute_directions.append(head + str(amt * distance))
         if heading == 'R':
             new_waypoint = {}

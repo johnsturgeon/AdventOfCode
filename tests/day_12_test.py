@@ -29,4 +29,4 @@ def test_sample(sample_data):
 
 def test_real(real_data):
     assert day_12.get_manhattan_distance(real_data) == 590
-    assert day_12.get_manhattan_distance(real_data, use_waypoint=True) == 35809
+    assert day_12.get_manhattan_distance(real_data, use_waypoint=True) == 42013
